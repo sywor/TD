@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameLogic", "GameLogic\GameLogic.vcxproj", "{BCCE5DDF-49E8-4994-A0C2-61A5F0A3FC60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCCE5DDF-49E8-4994-A0C2-61A5F0A3FC60}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCCE5DDF-49E8-4994-A0C2-61A5F0A3FC60}.Debug|Win32.Build.0 = Debug|Win32
+		{BCCE5DDF-49E8-4994-A0C2-61A5F0A3FC60}.Release|Win32.ActiveCfg = Release|Win32
+		{BCCE5DDF-49E8-4994-A0C2-61A5F0A3FC60}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

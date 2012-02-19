@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Sound">
+      <UniqueIdentifier>{5e0783cf-6c80-46ce-92c4-42ded0f92c11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PathFinding">
+      <UniqueIdentifier>{0c6f1288-bbbc-4614-acd5-a0f133b0e75b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PathFinding">
+      <UniqueIdentifier>{564e30a8-fd3c-414a-897d-fb4a36688221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Towers">
+      <UniqueIdentifier>{a81697a6-70fb-4d17-bc55-e5e7686a599a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Towers">
+      <UniqueIdentifier>{a73c4b38-2e72-4afe-a941-f37e2b07264f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mobs">
+      <UniqueIdentifier>{61c29667-f453-4672-aba2-1e987f74140b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mobs">
+      <UniqueIdentifier>{a26a2553-b53b-4d03-9642-0e23b55704b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Logic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tower.h">
+      <Filter>Header Files\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="FireTower.h">
+      <Filter>Header Files\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="SlowTower.h">
+      <Filter>Header Files\Towers</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>Header Files\Mobs</Filter>
+    </ClInclude>
+    <ClInclude Include="mobTroll.h">
+      <Filter>Header Files\Mobs</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files\PathFinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Header Files\PathFinding</Filter>
+    </ClInclude>
+    <ClInclude Include="Sounds.h">
+      <Filter>Header Files\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod.h">
+      <Filter>Header Files\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod.hpp">
+      <Filter>Header Files\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Logic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sounds.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tower.cpp">
+      <Filter>Source Files\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="FireTower.cpp">
+      <Filter>Source Files\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="SlowTower.cpp">
+      <Filter>Source Files\Towers</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>Source Files\Mobs</Filter>
+    </ClCompile>
+    <ClCompile Include="MobTroll.cpp">
+      <Filter>Source Files\Mobs</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files\PathFinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source Files\PathFinding</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameLogic.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
