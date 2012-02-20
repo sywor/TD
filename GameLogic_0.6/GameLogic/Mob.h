@@ -8,10 +8,7 @@ class Mob
 {
 private:
 	int listCounter;
-protected:
-	int MobType;	
-	
-	Timer* timer;
+protected:	
 	Timer* timerDOT;	
 	float speed;
 	Sounds* mobSound;
@@ -21,11 +18,14 @@ public:
 	virtual ~Mob();
 	virtual void	Update(vector<Node*> _path, Graph* _graph) = 0;
 	D3DXVECTOR3 mobPos;	
-	double life, DOTCount, DOT;
-	bool alive;
+	int life, DOT;
+	bool alive, DOTEnabled;
 	Node* nextNode;
 	Node* currNode;
 	void removeMe();
 	int ID;
+	float DOTTime;
+	Timer* timer;
+	int MobType;
 };
 #endif

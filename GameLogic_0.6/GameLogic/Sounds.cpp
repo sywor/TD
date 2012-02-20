@@ -1,8 +1,28 @@
 #include "Sounds.h"
 
+Sounds::Sounds(FMOD::System* _system)
+{
+	system = _system;
+	fireTowerAttack = NULL;
+	trollDeath = NULL;
+	Channel = 0;
+	system = NULL;
+	result = FMOD::System_Create(&system);
+	system->setOutput(FMOD_OUTPUTTYPE_WASAPI);
+	system->init(1024, FMOD_INIT_NORMAL, 0);
+}
+
 Sounds::Sounds()
 {
-
+	system = 0;
+	fireTowerAttack = NULL;
+	trollDeath = NULL;
+	Channel = 0;
+	system = NULL;
+	result = FMOD::System_Create(&system);
+	system->setOutput(FMOD_OUTPUTTYPE_WASAPI);
+	system->init(1024, FMOD_INIT_NORMAL, 0);
+	channelIndex = 0;
 }
 
 enum soundSelector
@@ -13,21 +33,8 @@ enum soundSelector
 
 void Sounds::initSounds()
 {
-	fireTowerAttack = NULL;
-	trollDeath = NULL;
-	Channel = 0;
-	system = NULL;
-	result = FMOD::System_Create(&system);
-	system->setOutput(FMOD_OUTPUTTYPE_WASAPI);
-	system->init(1024, FMOD_INIT_NORMAL, 0);
-
 	result = system->createSound("FireTower_attack.mp3", 0, NULL, &fireTowerAttack);
-	result = system->createSound("TrollMob_Death.mp3", 0, NULL, &trollDeath);
-
-	for (int i = 0; i < 10; i++)
-	{
-		Channels[i] = 0;
-	}
+	result = system->createSound("TrollMob_Death.wav", 0, NULL, &trollDeath);
 }
 
 void Sounds::PlaySounds(int _sound)

@@ -6,8 +6,7 @@
 
 class Tower
 {
-protected:
-	int towerType;
+protected:	
 	int nodeID;
 	double damage;
 	float range;
@@ -21,6 +20,7 @@ public:
 	virtual void	Update() = 0;
 	Node* node;
 	float calcDist(const D3DXVECTOR3& v1, const D3DXVECTOR3& v2);
+	int towerType;
 
 };
 #endif

@@ -1,16 +1,19 @@
-﻿Build started 2012-02-18 13:06:41.
-     1>Project "C:\Users\Ossian\Desktop\GameLogic_0.6\GameLogic\GameLogic.vcxproj" on node 2 (build target(s)).
+﻿Build started 2012-02-20 14:43:12.
+     1>Project "C:\Temp\GameLogic_0.7\GameLogic\GameLogic.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\GameLogic.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\GameLogic.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\Soundinc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Sounds.cpp
-         Sounds.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\Soundinc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Logic.cpp
+         Logic.cpp
+     1>c:\temp\gamelogic_0.7\gamelogic\logic.cpp(10): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\temp\gamelogic_0.7\gamelogic\logic.cpp(12): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\temp\gamelogic_0.7\gamelogic\logic.cpp(26): warning C4018: '<' : signed/unsigned mismatch
        ResourceCompile:
          All outputs are up-to-date.
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ossian\Desktop\GameLogic_0.6\Debug\GameLogic.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\Soundlib fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\GameLogic.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Ossian\Desktop\GameLogic_0.6\Debug\GameLogic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ossian\Desktop\GameLogic_0.6\Debug\GameLogic.lib" /MACHINE:X86 Debug\GameLogic.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Temp\GameLogic_0.7\Debug\GameLogic.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\Soundlib fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\GameLogic.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Temp\GameLogic_0.7\Debug\GameLogic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Temp\GameLogic_0.7\Debug\GameLogic.lib" /MACHINE:X86 Debug\GameLogic.res
          Debug\GameLogic.exe.embed.manifest.res
          Debug\FireTower.obj
          Debug\Graph.obj
@@ -28,12 +31,12 @@
          All outputs are up-to-date.
        LinkEmbedManifest:
          All outputs are up-to-date.
-         GameLogic.vcxproj -> C:\Users\Ossian\Desktop\GameLogic_0.6\Debug\GameLogic.exe
+         GameLogic.vcxproj -> C:\Temp\GameLogic_0.7\Debug\GameLogic.exe
        FinalizeBuildStatus:
          Deleting file "Debug\GameLogic.unsuccessfulbuild".
          Touching "Debug\GameLogic.lastbuildstate".
-     1>Done Building Project "C:\Users\Ossian\Desktop\GameLogic_0.6\GameLogic\GameLogic.vcxproj" (build target(s)).
+     1>Done Building Project "C:\Temp\GameLogic_0.7\GameLogic\GameLogic.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.67
+Time Elapsed 00:00:01.39

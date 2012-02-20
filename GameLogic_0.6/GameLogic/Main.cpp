@@ -4,9 +4,7 @@
 #include "Graph.h"
 #include "MobTroll.h"
 #include "Timer.h"
-#include <math.h>
 #include "Sounds.h"
-
 
 using namespace std;
 
@@ -20,16 +18,9 @@ int main()
 
 	cout << graph->nodeList.size() << endl << endl;
 	timer->reset();
-	//for (int i = 0; i < graph->nodeList.size(); i++)
-	//{
-	//	for (int j = 0; j < graph->nodeList[i]->edges.size(); j++)
-	//	{
-	//		cout << graph->nodeList[i]->ID << " : " << graph->nodeList[i]->edges[j]->ID << endl;
-	//	}
-	//	cout << "_____________________" << endl;
-	//}
 
 	vector<Node*> tehList;
+	sound->initSounds();
 
 	graph->nodeList[32]->setWeight(10000);
 	graph->nodeList[33]->setWeight(10000);
@@ -60,13 +51,12 @@ int main()
 	graph->setTower(graph->nodeList[12], tower4);
 	graph->setTower(graph->nodeList[13], tower5);
 
-	sound->initSounds();
-
 	float dist = 0.0f;
 	int ticker = 1;
 	while(true)
 	{
 		timer->tick();
+		sound->system->update();
 
 		if (timer->getTime() > 2.0f && mobs.size() < 5)
 		{
@@ -84,7 +74,7 @@ int main()
 		
 		for (int i = 0; i < mobs.size(); i++)
 		{
-			cout << "X: " << mobs[i]->mobPos.x <<  " \tZ: " << mobs[i]->mobPos.z  << "\tID: " << mobs[i]->ID << " \tLife: " << ceil(mobs[i]->life) << "\tCurrNode: " << mobs[i]->currNode->ID << " \tNextNode: " << mobs[i]->nextNode->ID << "\t DotCount: " << mobs[i]->DOTCount<< endl;
+			cout << "X: " << mobs[i]->mobPos.x <<  " \tZ: " << mobs[i]->mobPos.z  << "\tID: " << mobs[i]->ID << " \tLife: " << mobs[i]->life << "\tCurrNode: " << mobs[i]->currNode->ID << " \tNextNode: " << mobs[i]->nextNode->ID << "\t DotEnabled: " << mobs[i]->DOTEnabled<< endl;
 
 			if (!mobs[i]->alive)
 			{
@@ -98,26 +88,27 @@ int main()
 
 		for (int i = 0; i < graph->nodeList.size(); i++)
 		{
-			cout << "ID: " << graph->nodeList[i]->ID;
+			if (graph->nodeList[i]->tower)
+			{			
+				cout << "ID: " << graph->nodeList[i]->ID << "\tAttacking: " << graph->nodeList[i]->tower->isAttacking;
 
-			if (!graph->nodeList[i]->towerTargets.empty())
-			{
-				cout << "\tTargets";
-
-				for (int j = 0; j < graph->nodeList[i]->towerTargets.size(); j++)
+				if (!graph->nodeList[i]->towerTargets.empty())
 				{
-					cout << "\t: " << graph->nodeList[i]->towerTargets[j]->ID;
-				}
+					cout << "\tTargets";
 
-				cout << endl;
-			}
-			else
-			{
-				cout << "\tTargets: NULL" << endl;
+					for (int j = 0; j < graph->nodeList[i]->towerTargets.size(); j++)
+					{
+						cout << "\t: " << graph->nodeList[i]->towerTargets[j]->ID;
+					}
+
+					cout << endl;
+				}
+				else
+				{
+					cout << "\tTargets: NULL" << endl;
+				}
 			}
 		}
-		
-
 		system("cls");
 
 

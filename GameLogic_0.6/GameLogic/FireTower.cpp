@@ -16,19 +16,10 @@ void FireTower::Update()
 	{
 		timer->reset();
 		towerSound->PlaySounds(0);
-
-		if (node->towerTarget->DOTCount < 0.5f)
-		{
-			node->towerTarget->life -= damage;
-			node->towerTarget->DOT = DOTdamage;
-			node->towerTarget->DOTCount = 1.0;
-		}
-		else
-		{
-			node->towerTarget->life -= damage;
-			node->towerTarget->DOTCount += 0.1;
-		}
-
+		node->towerTarget->life -= damage;
+		node->towerTarget->DOT = DOTdamage;
+		node->towerTarget->DOTEnabled = true;
+		node->towerTarget->timer->reset();
 
 		for (int i = 0; i < 4; i++)
 		{
@@ -40,18 +31,10 @@ void FireTower::Update()
 				{
 					for (int k = 0; k <temp->nodeMobs.size(); k++)
 					{
-						if (node->towerTarget->DOTCount < 0.5f)
-						{
-							temp->nodeMobs[k]->life -= damage;
-							temp->nodeMobs[k]->DOT = DOTdamage;
-							temp->nodeMobs[k]->DOTCount = 1.0;
-						}
-						else
-						{
-							temp->nodeMobs[k]->life -= damage;
-							temp->nodeMobs[k]->DOTCount += 0.1;
-						}
-
+						temp->nodeMobs[k]->life -= damage;
+						temp->nodeMobs[k]->DOT = DOTdamage;
+						temp->nodeMobs[k]->DOTEnabled = true;
+						temp->nodeMobs[k]->timer->reset();
 					}
 				}				
 			}

@@ -14,9 +14,10 @@ Mob::Mob(int _MobType, int _ID, Sounds* _mobSound)
 	speed = 10.0f;
 	alive = true;
 	life = 1000;
-	DOTCount = 0.0;
+	DOTEnabled = false;
 	ID = _ID;
 	mobSound = _mobSound;
+	DOTTime = 5.0f;
 }
 
 Mob::~Mob(){}
@@ -37,25 +38,22 @@ void Mob::ShootMe(Graph* _graph)
 
 void Mob::Update(vector<Node*> _path, Graph* _graph)
 {
-	
-
-	if (DOTCount > 0)
+	if (DOTEnabled)
 	{
 		timer->tick();
 		timerDOT->tick();
 
-		if (1.0f <= timerDOT->getTime())
+		if (DOTTime < timer->getTime())
+		{
+			timer->reset();
+			timerDOT->reset();
+			DOTEnabled = false;	
+		}
+		
+		if (1.0f < timerDOT->getTime())
 		{
 			life -= DOT;
 			timerDOT->reset();
-		}
-
-		float time = timer->getTime();
-
-		if ((3.0f * DOTCount) < time)
-		{
-			DOTCount = 0;
-			timer->reset();
 		}
 	}
 

@@ -3,6 +3,7 @@
 
 #include "fmod.h"
 #include "fmod.hpp"
+#include "Timer.h"
 #include <Windows.h>
 
 class Sounds
@@ -10,14 +11,16 @@ class Sounds
 private:
 	FMOD::Sound* fireTowerAttack;
 	FMOD::Sound* trollDeath;
-	FMOD_RESULT result;
-	FMOD::System* system;
+	FMOD_RESULT result;	
 	FMOD::Channel* Channel;
-	FMOD::Channel* Channels[10];
+
 public:
+	Sounds(FMOD::System* _system);
 	Sounds();
 	void initSounds();
 	void PlaySounds(int _sound);
+	FMOD::System* system;
+	int channelIndex;
 };
 
 #endif;
